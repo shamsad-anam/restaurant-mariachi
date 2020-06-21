@@ -1,0 +1,45 @@
+.menu {
+  background-color: var(--color-light);
+  padding-top: 50px;
+
+  & .text__primary {
+    margin-bottom: 20px;
+  }
+  & .text__secondary {
+    // width: 70%;
+    margin: auto;
+    margin-bottom: 30px;
+  }
+  & .my-btn {
+    margin-bottom: 50px;
+
+    @include respond(385px) {
+      padding: 10px 20px;
+    }
+  }
+  & .col-lg-12 {
+    padding: 0;
+  }
+  &__img-top {
+    background-image: url("../img/2.png");
+    @include bgFit;
+    height: 350px;
+  }
+  &__img-bottom {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .about {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    &__img {
+      width: 100%;
+    }
+    & .info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      //   align-items: center;
+    }
+  }
+}

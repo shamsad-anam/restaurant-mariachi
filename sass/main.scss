@@ -1,0 +1,148 @@
+@import "_mixins.scss";
+@import "_typography.scss";
+@import "_components.scss";
+@import "_menu.scss";
+@import "_offers.scss";
+
+// // variables
+:root {
+  --color-dark: #4a1831;
+  --color-light: #ffd7ad;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto";
+}
+
+.header {
+  font-family: "Montserrat";
+  font-size: 25px;
+
+  background-image: url("../img/1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-bottom: 40px;
+  @include respond(991px) {
+    font-size: 90%;
+  }
+
+  .my {
+    &__navbar {
+      background-color: var(--color-dark);
+      @include respond(991px) {
+        background-color: transparent;
+      }
+
+      width: 100%;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    &__logo {
+      width: 57px;
+      height: 57px;
+    }
+    &__ham {
+      color: var(--color-light);
+      font-size: 30px;
+      position: fixed;
+      top: 13px;
+      right: 30px;
+      z-index: 999;
+
+      display: none;
+
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      text-align: center;
+      background-color: var(--color-dark);
+      padding: 5px 10px;
+      box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.2);
+
+      @include respond(991px) {
+        display: block;
+      }
+    }
+
+    &__hidden-nav {
+      display: block;
+      margin: auto;
+
+      @include respond(991px) {
+        visibility: hidden;
+        opacity: 0;
+        background-color: var(--color-dark);
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        z-index: 1;
+
+        width: 0;
+        height: 100vh;
+        text-align: center;
+        padding: 5px;
+        padding-top: 80px;
+
+        transition: all 0.3s;
+      }
+
+      .nav-item {
+        margin-right: 20px;
+        @include respond(991px) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  .hero {
+    @include respond(767px) {
+      text-align: center;
+    }
+    &__icon {
+      margin-top: 20px;
+      width: 145px;
+      height: 153px;
+      @include respond(767px) {
+        margin-top: 0;
+      }
+    }
+    &__title {
+      font-family: "Roboto";
+      font-size: 90px;
+      font-weight: 700;
+      @include respond(991px) {
+        font-size: 60px;
+      }
+    }
+    &__text {
+      width: 50%;
+      @include respond(767px) {
+        margin: auto;
+      }
+    }
+    .btn {
+      margin-top: 30px;
+    }
+  }
+}
+
+.show-nav {
+  visibility: visible !important;
+  opacity: 1 !important;
+  width: 200px !important;
+}
+
+// // adding media queries
+// @include respond(992px) {
+//     //codes to happen
+// }

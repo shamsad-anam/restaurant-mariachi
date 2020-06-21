@@ -1,0 +1,19 @@
+.text {
+  &__primary {
+    font-size: 32px;
+    font-weight: 700;
+  }
+  &__secondary {
+    font-size: 25px;
+    font-weight: 400;
+  }
+  &__para {
+    font-size: 25px;
+  }
+  &--dark {
+    color: var(--color-dark);
+  }
+  &--light {
+    color: var(--color-light);
+  }
+}
